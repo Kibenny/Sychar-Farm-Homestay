@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & Book — Sychar Farm Homestay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    .page-hero{padding:10rem 0 4rem;background:linear-gradient(135deg,var(--green-pale) 0%,white 100%);border-bottom:1px solid var(--green-light);}
+    .contact-section{padding:5rem 0 6rem;}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start;}
+    @media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:2.5rem;}}
+
+    /* LEFT — info */
+    .contact-info{}
+    .c-channel{
+      display:flex;gap:1.1rem;align-items:flex-start;
+      padding:1.4rem;
+      background:white;
+      border:1px solid rgba(46,112,64,.1);
+      border-radius:14px;
+      margin-bottom:1rem;
+      transition:transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+      text-decoration:none;
+      color:inherit;
+      cursor:pointer;
+    }
+    .c-channel:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(46,112,64,.1);}
+    .c-channel-icon{
+      width:48px;height:48px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.4rem;flex-shrink:0;
+    }
+    .c-channel-icon.wa{background:#e8f8ee;}
+    .c-channel-icon.email{background:#eef3fe;}
+    .c-channel-icon.fb{background:#eef1fc;}
+    .c-channel-title{font-weight:600;font-size:.9rem;color:var(--dark);margin-bottom:.2rem;}
+    .c-channel-sub{font-size:.78rem;font-weight:300;color:var(--text-mid);line-height:1.55;}
+    .c-channel-value{font-size:.8rem;font-weight:500;color:var(--green-deep);margin-top:.3rem;}
+    .c-channel-arrow{
+      margin-left:auto;align-self:center;
+      color:var(--text-light);font-size:1.2rem;
+      transition:transform .25s;
+    }
+    .c-channel:hover .c-channel-arrow{transform:translateX(4px);color:var(--green-deep);}
+
+    .location-card{
+      background:var(--dark);
+      border-radius:16px;
+      padding:1.5rem;
+      margin-top:1.5rem;
+      position:relative;
+      overflow:hidden;
+    }
+    .location-card::before{
+      content:'';position:absolute;inset:0;
+      background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
+      background-size:18px 18px;
+    }
+    .location-title{
+      font-family:var(--font-serif);
+      font-size:1rem;font-weight:600;
+      color:white;margin-bottom:.6rem;
+      position:relative;
+    }
+    .location-detail{
+      font-size:.8rem;font-weight:300;
+      color:rgba(255,255,255,.5);
+      line-height:1.7;
+      position:relative;
+    }
+    .location-detail span{color:rgba(255,255,255,.75);font-weight:400;}
+
+    /* RIGHT — booking form feel */
+    .booking-panel{
+      background:white;
+      border:1.5px solid rgba(46,112,64,.1);
+      border-radius:18px;
+      padding:2rem;
+      box-shadow:0 20px 60px rgba(46,112,64,.07);
+    }
+    .bp-title{
+      font-family:var(--font-serif);
+      font-size:1.5rem;font-weight:600;
+      color:var(--dark);margin-bottom:.3rem;
+    }
+    .bp-sub{font-size:.8rem;font-weight:300;color:var(--text-mid);margin-bottom:1.5rem;line-height:1.6;}
+    .form-group{margin-bottom:1.1rem;}
+    .form-group label{
+      display:block;font-size:.65rem;font-weight:600;
+      letter-spacing:.12em;text-transform:uppercase;
+      color:var(--text-light);margin-bottom:.4rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%;
+      padding:.7rem .9rem;
+      border:1.5px solid rgba(46,112,64,.15);
+      border-radius:10px;
+      font-family:var(--font-sans);
+      font-size:.85rem;
+      font-weight:300;
+      color:var(--dark);
+      background:var(--cream);
+      transition:border-color .25s, box-shadow .25s;
+      outline:none;
+      -webkit-appearance:none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{
+      border-color:var(--green-mid);
+      box-shadow:0 0 0 3px rgba(61,145,82,.12);
+      background:white;
+    }
+    .form-group textarea{resize:vertical;min-height:90px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
+    @media(max-width:500px){.form-row{grid-template-columns:1fr;}}
+    .form-submit{
+      width:100%;
+      background:var(--green-deep);
+      color:white;
+      border:none;
+      padding:.85rem 1.5rem;
+      border-radius:50px;
+      font-family:var(--font-sans);
+      font-size:.82rem;
+      font-weight:500;
+      letter-spacing:.08em;
+      cursor:pointer;
+      margin-top:.5rem;
+      transition:all .25s cubic-bezier(.34,1.56,.64,1);
+      box-shadow:0 4px 16px rgba(46,112,64,.25);
+    }
+    .form-submit:hover{background:var(--green-mid);transform:translateY(-2px);box-shadow:0 8px 24px rgba(46,112,64,.3);}
+    .form-note{
+      font-size:.68rem;font-weight:300;
+      color:var(--text-light);text-align:center;
+      margin-top:.8rem;line-height:1.6;
+    }
+    .form-divider{
+      display:flex;align-items:center;gap:.8rem;
+      margin:1.2rem 0;
+      font-size:.65rem;color:var(--text-light);letter-spacing:.1em;text-transform:uppercase;
+    }
+    .form-divider::before,.form-divider::after{
+      content:'';flex:1;height:1px;background:var(--green-light);
+    }
+    .wa-direct{
+      display:flex;align-items:center;justify-content:center;gap:.6rem;
+      background:#e8f8ee;
+      border:1.5px solid #b6efc2;
+      color:var(--green-deep);
+      padding:.75rem 1.4rem;
+      border-radius:50px;
+      font-size:.82rem;font-weight:500;
+      text-decoration:none;
+      transition:all .25s cubic-bezier(.34,1.56,.64,1);
+      width:100%;
+    }
+    .wa-direct:hover{background:#d0f5da;transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,112,64,.12);}
+    .success-msg{
+      display:none;
+      text-align:center;
+      padding:2rem;
+    }
+    .success-msg .check{font-size:2.5rem;margin-bottom:.5rem;display:block;}
+    .success-msg h3{font-family:var(--font-serif);font-size:1.3rem;color:var(--dark);margin-bottom:.5rem;}
+    .success-msg p{font-size:.82rem;color:var(--text-mid);line-height:1.6;}
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Sychar Farm <span>Homestay</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="nav-book" href="contact.html">Book Now</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--green-deep);font-weight:600">Book Now →</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="section-label">Reach Out</p>
+    <h1 class="section-title">Contact <em>& Book</em></h1>
+    <p style="font-size:.9rem;font-weight:300;color:var(--text-mid);max-width:480px;line-height:1.8;">We're easy to reach. Drop us a message on WhatsApp, send an email, or fill in the form — we'll get back to you promptly.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="section-label">Direct Channels</p>
+        <h2 class="section-title" style="font-size:1.6rem;margin-bottom:1.5rem;">Get in <em>touch</em></h2>
+
+        <a class="c-channel" href="https://wa.me/254722511819?text=Hello!%20I'd%20like%20to%20inquire%20about%20a%20stay%20at%20Sychar%20Farm." target="_blank">
+          <div class="c-channel-icon wa">📱</div>
+          <div>
+            <p class="c-channel-title">WhatsApp</p>
+            <p class="c-channel-sub">Fastest way to reach us. We respond within the hour.</p>
+            <p class="c-channel-value">+254 722 511 819</p>
+          </div>
+          <span class="c-channel-arrow">→</span>
+        </a>
+
+        <a class="c-channel" href="mailto:sycharfarm@gmail.com">
+          <div class="c-channel-icon email">✉️</div>
+          <div>
+            <p class="c-channel-title">Email</p>
+            <p class="c-channel-sub">For detailed enquiries or group bookings.</p>
+            <p class="c-channel-value">sycharfarm@gmail.com</p>
+          </div>
+          <span class="c-channel-arrow">→</span>
+        </a>
+
+        <a class="c-channel" href="https://web.facebook.com/profile.php?id=100092346426512" target="_blank">
+          <div class="c-channel-icon fb">👍</div>
+          <div>
+            <p class="c-channel-title">Facebook</p>
+            <p class="c-channel-sub">Follow us for updates, photos and availability.</p>
+            <p class="c-channel-value">Sychar Farm Homestay</p>
+          </div>
+          <span class="c-channel-arrow">→</span>
+        </a>
+
+        <!-- M-Pesa -->
+        <div id="mpesa-section" style="background:var(--green-pale);border:1.5px solid var(--green-light);border-radius:14px;padding:1.4rem;margin-bottom:1rem;">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-bottom:.8rem;">
+            <div style="display:flex;align-items:center;gap:.6rem;">
+              <svg width="22" height="22" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+                <rect width="40" height="40" rx="8" fill="#00a550"/>
+                <text x="20" y="26" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="12" fill="white">M</text>
+                <path d="M8 28 Q20 32 32 28" stroke="white" stroke-width="1.5" fill="none"/>
+              </svg>
+              <span style="font-weight:600;font-size:.9rem;color:var(--dark);">Pay via M-Pesa</span>
+            </div>
+          </div>
+          <!-- Paybill details -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.9rem;">
+            <div style="background:white;border-radius:8px;padding:.6rem .8rem;border:1px solid var(--green-light);">
+              <span style="font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);display:block;margin-bottom:.2rem;">Paybill Number</span>
+              <span style="font-weight:700;font-size:1.1rem;color:#00a550;letter-spacing:.04em;">303030</span>
+            </div>
+            <div style="background:white;border-radius:8px;padding:.6rem .8rem;border:1px solid var(--green-light);">
+              <span style="font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);display:block;margin-bottom:.2rem;">Account Number</span>
+              <span style="font-weight:700;font-size:1.1rem;color:#00a550;letter-spacing:.04em;">3295#<span style="font-size:.8rem;font-weight:500;color:var(--text-mid);">NAME</span></span>
+            </div>
+          </div>
+          <!-- Steps -->
+          <p style="font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:.5rem;">How to Pay</p>
+          <ol style="list-style:none;display:flex;flex-direction:column;gap:.35rem;padding:0;">
+            <li style="display:flex;align-items:flex-start;gap:.5rem;font-size:.75rem;color:var(--text-mid);">
+              <span style="background:#00a550;color:white;width:16px;height:16px;border-radius:50%;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem;">1</span>
+              Go to <strong style="color:var(--dark);">M-Pesa</strong> on your phone
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.5rem;font-size:.75rem;color:var(--text-mid);">
+              <span style="background:#00a550;color:white;width:16px;height:16px;border-radius:50%;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem;">2</span>
+              Select <strong style="color:var(--dark);">Lipa na M-Pesa → Paybill</strong>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.5rem;font-size:.75rem;color:var(--text-mid);">
+              <span style="background:#00a550;color:white;width:16px;height:16px;border-radius:50%;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem;">3</span>
+              Enter Business No. <strong style="color:var(--dark);">303030</strong>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.5rem;font-size:.75rem;color:var(--text-mid);">
+              <span style="background:#00a550;color:white;width:16px;height:16px;border-radius:50%;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem;">4</span>
+              Account No: <strong style="color:var(--dark);">3295#</strong> then your name
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.5rem;font-size:.75rem;color:var(--text-mid);">
+              <span style="background:#00a550;color:white;width:16px;height:16px;border-radius:50%;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem;">5</span>
+              Enter Amount → Enter M-Pesa PIN → <strong style="color:var(--dark);">Confirm</strong>
+            </li>
+          </ol>
+        </div>
+
+        <div class="location-card">
+          <p class="location-title">📍 Find Us</p>
+          <p class="location-detail" style="margin-bottom:.9rem;">
+            <span>Itigo, Nandi County</span><br>
+            Nandi County, Kenya · ~25km from Eldoret
+          </p>
+          <div style="border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,.1);">
+            <iframe
+              src="https://www.google.com/maps?q=Sychar%20Farm%20Homestay%20Itigo%20Nandi%20County&output=embed"
+              width="100%"
+              height="220"
+              style="border:0;display:block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sychar Farm location in Nandi County">
+            </iframe>
+          </div>
+          <a href="https://share.google/CtQqwoIDIDRsoZabO"
+             target="_blank"
+             style="display:inline-flex;align-items:center;gap:.35rem;font-size:.68rem;color:rgba(255,255,255,.5);text-decoration:none;margin-top:.55rem;transition:color .2s;"
+             onmouseover="this.style.color='rgba(255,255,255,.85)'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            View larger map &amp; get directions
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT — booking panel -->
+      <div class="booking-panel reveal" id="bookingPanel">
+        <div id="formView">
+          <h2 class="bp-title">Send an Enquiry</h2>
+          <p class="bp-sub">Fill in your details and we'll reach out to confirm your booking.</p>
+
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="fName" placeholder="e.g. Jane Wanjiku" autocomplete="name"/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" id="fPhone" placeholder="+254 7XX XXX XXX"/>
+            </div>
+            <div class="form-group">
+              <label>Email (optional)</label>
+              <input type="email" id="fEmail" placeholder="jane@email.com"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Check-in Date</label>
+              <input type="date" id="fCheckin"/>
+            </div>
+            <div class="form-group">
+              <label>Check-out Date</label>
+              <input type="date" id="fCheckout"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Room Preference</label>
+              <select id="fRoom">
+                <option value="">— Select —</option>
+                <option>Main House Room</option>
+                <option>Private Cottage Suite</option>
+                <option>No preference</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <select id="fGuests">
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4+ guests</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message (optional)</label>
+            <textarea id="fMessage" placeholder="Any special requests, questions, or details about your visit..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Send Enquiry →</button>
+          <p class="form-note">We'll confirm via WhatsApp or email within 24 hours.</p>
+
+          <div class="form-divider">or book directly</div>
+          <a class="wa-direct" href="https://wa.me/254722511819?text=Hello!%20I'd%20like%20to%20book%20a%20stay%20at%20Sychar%20Farm." target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div class="success-msg" id="successView">
+          <span class="check">✅</span>
+          <h3>Enquiry Sent!</h3>
+          <p>Thank you. We'll get back to you via WhatsApp or email within 24 hours to confirm your booking details.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-logo">Sychar Farm</span>
+      <span class="footer-tag">Homestay · Nandi County</span>
+      <div class="footer-rule"></div>
+      <p class="footer-desc">A peaceful farm retreat in the heart of Nandi County. Comfort, good food, and relaxed luxury.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms & Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact & Book</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Get in Touch</p>
+      <div class="footer-contact-list">
+        <a href="https://wa.me/254722511819" target="_blank">📱 +254 722 511 819</a>
+        <a href="mailto:sycharfarm@gmail.com">✉️ sycharfarm@gmail.com</a>
+        <a href="#">📍 Itigo, Nandi County</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Sychar Farm Homestay · All rights reserved</span>
+    <p>Licensed by the Tourism Regulatory Authority of Kenya.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/254722511819" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <a href="mailto:sycharfarm@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><polyline points="2,4 12,13 22,4"/></svg></a>
+      <a href="https://web.facebook.com/profile.php?id=100092346426512" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+<script>
+function submitForm() {
+  const name = document.getElementById('fName').value.trim();
+  const phone = document.getElementById('fPhone').value.trim();
+  if(!name || !phone) {
+    alert('Please enter your name and phone number so we can reach you.');
+    return;
+  }
+  const checkin  = document.getElementById('fCheckin').value;
+  const checkout = document.getElementById('fCheckout').value;
+  const room     = document.getElementById('fRoom').value;
+  const guests   = document.getElementById('fGuests').value;
+  const msg      = document.getElementById('fMessage').value.trim();
+  let waText = `Hello! I'd like to book a stay at Sychar Farm.%0A%0A`;
+  waText += `*Name:* ${encodeURIComponent(name)}%0A`;
+  waText += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+  if(checkin)  waText += `*Check-in:* ${checkin}%0A`;
+  if(checkout) waText += `*Check-out:* ${checkout}%0A`;
+  if(room)     waText += `*Room:* ${encodeURIComponent(room)}%0A`;
+  waText += `*Guests:* ${encodeURIComponent(guests)}%0A`;
+  if(msg)      waText += `*Message:* 
